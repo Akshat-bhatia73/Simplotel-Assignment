@@ -12,6 +12,7 @@ body {
   transition: ease-in 0.2s;
 }
 
+/* Start: Navigation Bar */
 .navbar {
   position: sticky;
   top: 0px;
@@ -23,14 +24,16 @@ body {
   overflow: auto;
 }
 
+/* Start: Removing scroll-bars from different browsers */
 .navbar::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari */
 }
 
 .navbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+/* End: Removing Scroll Bars */
 
 .links {
   flex: 2;
@@ -67,6 +70,7 @@ body {
   padding: 2px;
 }
 
+/* Start: Media Quesries for Navigation Menu */
 @media screen and (max-width: 1200px) {
   .links {
     gap: 80px;
@@ -92,13 +96,16 @@ body {
     font-size: 1rem;
   }
 }
+/* End: Media Queries for Navigation Menu */
 
+/* End: Navigation Menu */
+
+/* Start:Hero Section */
 section {
   font-family: "Montserrat", sans-serif;
 }
 
 .hero {
-  /* height: calc(100vh - 50px); */
   height: 550px;
   background-image: url(./assets/img1.jpg);
   background-repeat: no-repeat;
@@ -122,7 +129,7 @@ section {
   margin-bottom: 20px;
 }
 
-
+/* Start: Media Queries for Hero Section */
 @media screen and (max-width: 640px) {
   .hero {
     justify-content: center;
@@ -141,12 +148,15 @@ section {
 }
 
 @media screen and (max-width: 520px) {
-    .description {
-        width: 100%;
-    }
+  .description {
+    width: 100%;
+  }
 }
+/* End: Media Queries for Navigation Section */
+/* End: Hero Section */
 
-.catalogue {
+/* Start Order Section */
+.order {
   padding: 80px;
   display: flex;
   align-items: center;
@@ -155,7 +165,7 @@ section {
   gap: 50px;
 }
 
-.catalogue > * {
+.order > * {
   transition: ease-in-out 0.2s;
 }
 
@@ -203,7 +213,7 @@ section {
   font-size: 0.8rem;
 }
 
-.catalogue button {
+.order button {
   padding: 15px 30px;
   width: 150px;
   border-radius: 75px;
@@ -214,18 +224,21 @@ section {
   cursor: pointer;
 }
 
-@media screen  and (max-width: 1110px) {
-    .catalogue {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .cards {
-        gap: 50px;
-    }
+/* Start: Media Queries for Order Section */
+@media screen and (max-width: 1110px) {
+  .order {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .cards {
+    gap: 50px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .title {
-        font-size: 2rem;
-    }
+  .title {
+    font-size: 2rem;
+  }
 }
+/* End: Media Queries for Order Section */
+/* End: Order Section */
